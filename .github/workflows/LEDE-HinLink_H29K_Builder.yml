@@ -88,6 +88,12 @@ jobs:
     - name: 安装拉取源（Install feeds）
       run: cd openwrt && ./scripts/feeds install -a
 
+    - name: 安装拉取源（Install feeds）
+      run: |
+        cd openwrt
+        ./scripts/feeds update modem
+        ./scripts/feeds install -a -p modem
+
     - name: 加载自定义配置（Load custom configuration）
       run: |
         [ -e files ] && mkdir -p openwrt/files && mv files/LEDE/HinLink_H29K openwrt/files || echo "跳过：files/iStoreOS/X86_64 不存在"
