@@ -88,7 +88,7 @@ jobs:
     - name: 安装拉取源（Install feeds）
       run: cd openwrt && ./scripts/feeds install -a
 
-    - name: 安装拉取源（Install feeds）
+    - name: 更新安装modem
       run: |
         cd openwrt
         ./scripts/feeds update modem
