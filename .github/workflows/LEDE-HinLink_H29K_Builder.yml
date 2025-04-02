@@ -92,7 +92,7 @@ jobs:
       run: |
         cd openwrt
         ./scripts/feeds update modem
-        ./scripts/feeds install -a -p modem
+        ./scripts/feeds install -a -f -p modem
 
     - name: 加载自定义配置（Load custom configuration）
       run: |
